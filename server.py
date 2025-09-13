@@ -29,7 +29,7 @@ for line in data_file:
 
     
 #opens index (home page)
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def home():
   return render_template("index.html")
 
