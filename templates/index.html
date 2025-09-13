@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Muppet Characters</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css" />
+    <script
+      src="https://kit.fontawesome.com/b1efef281e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <div class="topnav">
+    <a class="active" href="/closed">
+      <i class="fa-solid fa-house"></i> Sesame Street Character Search
+    </a>
+    <a href="/list"><i class="fa-solid fa-list"></i> Show List </a>
+    <a href="/random"><i class="fa-solid fa-shuffle"></i> Random Muppet </a>
+    <a href="/all_muppets"
+      ><i class="fa-regular fa-address-book"></i> All Muppets
+    </a>
+
+    <form method="POST" action="result">
+      <button type="submit" id="search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+      <input type="text" name="character" placeholder="Search by name..." />
+    </form>
+  </div>
+
+  <div class="main">
+    <body>
+      <img
+        src="https://wallpapers.com/images/hd/colorful-sesame-street-group-photo-55ngwya2tbb19e13.jpg"
+        alt="Group of sesame street characters"
+        style="width: 100%"
+      />
+
+      <div class="notification-bottom">
+        <p>&nbsp;&nbsp;&nbsp;Rebekah Mayne's Computer Science Final Project</p>
+        <a class="active" href="/close">
+      <button class="notification-close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        </a>
+        
+      </div>
+    </body>
+  </div>
+</html>
