@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Muppet Characters</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css" />
+    <script
+      src="https://kit.fontawesome.com/b1efef281e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <div class="topnav">
+    <a href="/closed">
+      <i class="fa-solid fa-house"></i> Sesame Street Character Search
+    </a>
+    <a id="list" href="/list"><i class="fa-solid fa-list"></i> Show List </a>
+    <a href="/random"><i class="fa-solid fa-shuffle"></i> Random Muppet </a>
+    <a href="/all_muppets"
+      ><i class="fa-regular fa-address-book"></i> All Muppets
+    </a>
+
+    <form method="POST" action="result">
+      <button type="submit" id="search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+      <input type="text" name="character" placeholder="Search by name..." />
+    </form>
+  </div>
+
+  <div class="main">
+    <body>
+      <h1>Information for {{name}} is as follows:</h1>
+
+      <div style="width: 17%; float: left; text-align: center">
+        <p>
+          <img
+            src="{{image}}"
+            class="img-responsive"
+            alt="picture of {{name}}"
+            width="90%"
+          />
+        </p>
+      </div>
+
+      <div style="width: 80%; float: right">
+        <p>
+          <b>Name :</b> {{name}}
+          <br />
+          <b>Actor :</b> {{actor}}
+          <br />
+          <b>Description :</b> {{desc}}
+        </p>
+
+        <form method="POST" action="add_list">
+          <input
+            type="hidden"
+            id="character_id"
+            name="character_id"
+            value="{{character_id}}"
+          />
+          <input type="submit" value="Add to your List" id="save" />
+        </form>
+      </div>
+    </body>
+  </div>
+</html>
