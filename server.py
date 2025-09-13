@@ -2,9 +2,17 @@ from flask import Flask
 from flask import render_template, send_from_directory, request, redirect, send_file
 import model
 
+def home():
+    return render_template("index.html")
 
+def create_app():
+  app = Flask(__name__)
+  @app.route('/')
+  def home():
+    return render_template("index.html")
+  return app
 
-app = Flask(__name__)
+app = create_app()
 
 characters = []
 list_a = []
@@ -32,9 +40,7 @@ for line in data_file:
 
 
 
-@app.route("/", methods=["GET", "POST"])
-def home():
-  return render_template("index.html")
+
 
 
 
